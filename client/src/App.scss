@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+$primary-color: #0079bf;
+$dark-primary-color: #0067a3;
+$column-bg-color: #ebecf0;
+
+$gap: 16px;
+$boder-radius: 5px;
+$height-column-header: 40px;
+$height-column-footer: 40px;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.3em;
+}
+
+.App {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 40px 50px 1fr;
+  background-color: $primary-color;
+
+  .navbar {
+    padding: 0 $gap;
+    display: flex;
+    align-items: center;
+
+    &.app {
+      background-color: $dark-primary-color;
+      font-size: 24px;
+    }
+
+    &.dashboard {
+      font-size: 18px;
+    }
+  }
+
+  .dashboard-content {
+    padding-bottom: $gap;
+    margin: 0 $gap;
+    display: flex;
+    gap: 0 $gap/2;
+    overflow-x: auto;
+    border-radius: $boder-radius;
+
+    scrollbar-color: darken($primary-color, 15) darken($primary-color, 7.5);
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: darken($primary-color, 7.5);
+      border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: darken($primary-color, 15);
+      border-radius: 5px;
+    }
+
+    .dashboard-column {
+      flex: 0 0 auto;
+      width: 300px;
+      > * {
+        background-color: $column-bg-color;
+        color: #333;
+        padding: 0 8px;
+      }
+
+      header {
+        padding: 0 16px;
+        height: $height-column-header;
+        line-height: 40px;
+        font-weight: bold;
+        border-top-left-radius: $boder-radius;
+        border-top-right-radius: $boder-radius;
+      }
+
+      ul {
+        list-style: none;
+        max-height: calc(100% - #{$height-column-header} - #{$height-column-footer});
+        overflow-y: auto;
+        padding: 8px;
+        padding-top: 0;
+
+        scrollbar-color: darken($column-bg-color, 15) darken($column-bg-color, 7.5);
+        scrollbar-width: thin;
+
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: darken($column-bg-color, 7.5);
+          border-radius: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: darken($column-bg-color, 15);
+          border-radius: 5px;
+        }
+
+        li {
+          background-color: #fff;
+          border-radius: $boder-radius;
+          overflow: hidden;
+          padding: 8px;
+          box-shadow: 0 1px 0 #091e4240;
+          &:not(:last-child) {
+            margin-bottom: 8px;
+          }
+
+          img {
+            display: block;
+            width: calc(100% + 16px);
+            margin: -8px -8px 8px (-8px);
+          }
+        }
+      }
+
+      footer {
+        padding: 0 16px;
+        height: $height-column-footer;
+        line-height: 40px;
+        border-bottom-left-radius: $boder-radius;
+        border-bottom-right-radius: $boder-radius;
+      }
+    }
+  }
+}
