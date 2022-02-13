@@ -1,0 +1,32 @@
+@import '../../variables.scss';
+
+.dashboard-container {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+}
+
+.dashboard-content {
+  padding-bottom: $_16px;
+  margin: 0 $_16px;
+  display: flex;
+  gap: 0 $_8px;
+  overflow-x: auto;
+  border-radius: $boder-radius;
+
+  scrollbar-color: darken($primary-color, 30) darken($primary-color, 15);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    height: $_8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: darken($primary-color, 15);
+    border-radius: $boder-radius;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: darken($primary-color, 30);
+    border-radius: $boder-radius;
+  }
+}

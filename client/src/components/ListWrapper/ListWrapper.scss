@@ -1,0 +1,28 @@
+@import '../../variables.scss';
+
+.list-wrapper {
+  flex: 0 0 auto;
+  width: 275px;
+  > * {
+    background-color: $column-bg-color;
+    color: #333;
+    padding: 0 $_8px;
+  }
+
+  header {
+    padding: 0 $_16px;
+    height: $height-column-header;
+    line-height: 40px;
+    font-weight: bold;
+    border-top-left-radius: $boder-radius;
+    border-top-right-radius: $boder-radius;
+  }
+
+  footer {
+    padding: 0 $_16px;
+    height: $height-column-footer;
+    line-height: 40px;
+    border-bottom-left-radius: $boder-radius;
+    border-bottom-right-radius: $boder-radius;
+  }
+}

@@ -1,0 +1,18 @@
+@import '../../variables.scss';
+
+.card {
+  background-color: #fff;
+  border-radius: $boder-radius;
+  overflow: hidden;
+  padding: $_8px;
+  box-shadow: 0 1px 0 #091e4240;
+  &:not(:last-child) {
+    margin-bottom: $_8px;
+  }
+
+  .cover-image {
+    display: block;
+    width: calc(100% + 16px);
+    margin: -8px -8px 8px (-8px);
+  }
+}
