@@ -1,18 +1,73 @@
 @import '../../variables.scss';
 
 .card {
+  margin-bottom: 8px;
   background-color: #fff;
-  border-radius: $boder-radius;
+  border-radius: 3px;
   overflow: hidden;
   padding: $_8px;
   box-shadow: 0 1px 0 #091e4240;
-  &:not(:last-child) {
-    margin-bottom: $_8px;
+  cursor: pointer;
+  transition: $transition-hover;
+  position: relative;
+  &:hover {
+    background-color: #f4f5f7;
+    .edit-card {
+      display: flex;
+    }
   }
-
   .cover-image {
     display: block;
     width: calc(100% + 16px);
     margin: -8px -8px 8px (-8px);
+  }
+  .edit-card {
+    display: none;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 28px;
+    height: 28px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: $boder-radius;
+    background-color: #f4f5f7;
+    &:hover {
+      background-color: #e5e5e5;
+    }
+    .icon-edit {
+      font-size: 14px;
+      opacity: 0.5;
+    }
+  }
+  .card-label {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: $_8px;
+    .label {
+      height: $_8px;
+      border-radius: 8px;
+    }
+  }
+  span.card-title {
+    display: inline-block;
+    margin: 4px 0;
+  }
+  .card-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: $_8px;
+    .card-footer-item {
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .icon-card-footer {
+        color: #6b778c;
+      }
+    }
   }
 }

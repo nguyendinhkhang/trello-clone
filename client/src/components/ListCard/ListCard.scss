@@ -1,11 +1,9 @@
 @import '../../variables.scss';
 
 .list-cards {
-  list-style: none;
-  max-height: calc(100% - #{$height-column-header} - #{$height-column-footer});
   overflow-y: auto;
-  padding: $_8px;
-  padding-top: 0;
+  padding: 0 $_8px;
+  max-height: calc(100vh - 24px - #{$navbar-height} - #{$navbar-dashboard-height} - #{$height-column-header} - #{$height-column-footer});
 
   scrollbar-color: darken($column-bg-color, 15) darken($column-bg-color, 7.5);
   scrollbar-width: thin;
@@ -23,4 +21,24 @@
     background: darken($column-bg-color, 15);
     border-radius: $boder-radius;
   }
+
+  .card-dragging {
+    transition: transform 0.2s ease;
+    transform: rotateZ(5deg);
+  }
+
+  .card-dropping {
+    transition: transform 0.2s ease-in-out;
+    transform: rotateZ(0deg);
+  }
+
+  .card-drop-preview {
+    margin-bottom: 8px;
+    background: darken($column-bg-color, 5);
+    border-radius: 3px;
+  }
+}
+
+.list-cards-max-height {
+  max-height: calc(100vh - 24px - #{$navbar-height} - #{$navbar-dashboard-height} - #{$height-column-header});
 }

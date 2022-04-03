@@ -3,26 +3,154 @@
 .list-wrapper {
   flex: 0 0 auto;
   width: 275px;
-  > * {
-    background-color: $column-bg-color;
-    color: #333;
-    padding: 0 $_8px;
+  margin: 0 4px;
+  position: relative;
+  background-color: $column-bg-color;
+  border-radius: $boder-radius;
+
+  .header-list-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $_16px;
+    min-height: $height-column-header;
+    font-weight: 600;
+    cursor: pointer;
+
+    .header-title {
+      padding: $_8px 0;
+
+      span {
+        display: inline-block;
+        width: 225.333px;
+        word-wrap: break-word;        
+      }
+    }
+
+    .header-edit-title {
+      width: 100%;
+      padding: 6px 0;
+      margin-left: -8px;
+
+      .input-edit-title {
+        width: 100%;
+        resize: none;
+        overflow: hidden;
+        padding: 2px $_8px;
+        height: 24px;
+        font-weight: 600;
+        border: none;
+        border-radius: 1px;
+        transition: $transition-hover;
+      }
+    }
+
+    .header-extras {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      margin-top: 4px;
+      align-items: center;
+      justify-content: center;
+      margin-right: -12px;
+      border-radius: $boder-radius;
+      transition: $transition-hover;
+
+      &:hover {
+        background-color: #091e4214;
+      }
+    }
   }
 
-  header {
-    padding: 0 $_16px;
-    height: $height-column-header;
-    line-height: 40px;
-    font-weight: bold;
-    border-top-left-radius: $boder-radius;
-    border-top-right-radius: $boder-radius;
+  .extras-list {
+    width: 300px;
+    top: 40px;
+    left: 87%;
+    z-index: 9;
+    position: absolute;
+    background-color: #fff;
+    border-radius: $boder-radius;
+    box-shadow: 0 8px 16px -4px #091e4240, 0 0 0 1px #091e4214;
+
+    .extras-header {
+      padding: 0 $_8px;
+      text-align: center;
+      position: relative;
+      
+      span {
+        display: block;
+        padding: $_8px 0;
+        width: 100%;
+        border-bottom: 1px solid #091e4221;
+      }
+
+      .extras-close {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        
+        i {
+          color: #5e6c84;
+        }
+
+        &:hover {
+          i {
+            color: $text-primary-color;
+          }
+        }
+      }
+    }
+
+    .extras-list-item {
+      margin: 0;
+      list-style: none;
+      margin: $_8px 0;
+
+      .extras-item {
+        padding: $_8px;
+        cursor: pointer;
+        transition: $transition-hover;
+
+        &:hover {
+          background-color: #091e420a;
+        }
+      }
+    }
   }
 
-  footer {
-    padding: 0 $_16px;
+  .footer-list-wrapper {
     height: $height-column-footer;
-    line-height: 40px;
-    border-bottom-left-radius: $boder-radius;
-    border-bottom-right-radius: $boder-radius;
+    
+    .footer-action {
+      margin: 0 $_8px;
+      padding: 6px $_8px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: $transition-hover;
+      
+      i {
+        color: #5e6c84;
+      }
+
+      span {
+        margin-left: $_8px;
+        color: #5e6c84;
+      }
+
+      &:hover {
+        background-color:#091e4214;
+        i {
+          color: $text-primary-color;
+        }
+        span {
+          color: $text-primary-color;
+        }
+      }
+    }
   }
 }

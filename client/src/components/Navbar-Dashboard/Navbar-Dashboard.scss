@@ -1,8 +1,68 @@
 @import '../../variables.scss';
 
 .navbar-dashboard {
+  height: $navbar-dashboard-height;
   font-size: 18px;
   padding: 0 $_16px;
   display: flex;
   align-items: center;
+
+  .board-controll {
+    height: 30px;
+    cursor: pointer;
+    border-radius: $boder-radius;
+    background-color: $rgba-white-025;
+    transition: $transition-hover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: $_8px;
+    &:hover {
+      background-color: $rgba-white-05;
+    }
+    
+    .board-name {
+      padding: 4px 12px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .input-board-name {
+      width: 0;
+      display: inline-block;
+      border: none;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: $boder-radius;
+    }
+
+    .icon-navbar-dashboard {
+      color: #fff;
+      padding: 4px 12px;
+      font-size: 14px;
+      transition: $transition-hover;
+      &:hover {
+        transform: scale(1.2, 1.2);
+      }
+    }
+
+    .bi-pencil {
+      color: yellow;
+    }
+
+    .bi-star {
+      &:hover {
+        color: yellow;
+      }
+    }
+
+    .bi-star-fill {
+      color: yellow;
+    }
+
+    .bi-trash {
+      color: red;
+    }
+  }
 }

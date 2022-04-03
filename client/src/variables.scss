@@ -2,10 +2,19 @@
 
 $primary-color: #81c2eb;
 $dark-primary-color: darken($primary-color, 30);
+$text-primary-color: #172b4d;
+$rgba-white-025: rgba($color: #fff, $alpha: 0.25);
+$rgba-white-05: rgba($color: #fff, $alpha: 0.5);
+$background-color: #fafbfc;
+
+$transition-hover: all 0.2s;
+
+$navbar-height: 40px;
+$navbar-dashboard-height: 50px;
 
 $_8px: 8px;
 $_16px: 16px;
-$boder-radius: 5px;
+$boder-radius: 3px;
 
 /* List Wrapper */
 $column-bg-color: #ebecf0;

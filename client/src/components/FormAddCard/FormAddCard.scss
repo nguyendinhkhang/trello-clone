@@ -1,0 +1,39 @@
+@import '../../variables.scss';
+
+.form-add-card {
+  margin-bottom: $_8px;
+  border-radius: 3px;
+  background-color: $column-bg-color;
+
+  .input-card-title {
+    border: none;
+    outline: none;
+    resize: none;
+    overflow-y: auto;
+    height: 70px;
+    max-height: 160px;
+    width: 100%;
+    padding: $_8px;
+    margin-bottom: 4px;
+    background-color: #fff;
+    border-radius: $boder-radius;
+    box-shadow: 0 1px 0 #091e4240;
+
+    scrollbar-color: darken($column-bg-color, 15) darken($column-bg-color, 7.5);
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: $_8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: darken($column-bg-color, 7.5);
+      border-radius: $boder-radius;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: darken($column-bg-color, 15);
+      border-radius: $boder-radius;
+    }
+  }
+}

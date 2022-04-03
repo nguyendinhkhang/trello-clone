@@ -1,0 +1,23 @@
+@import '../../variables.scss';
+
+.form-add-list {
+  width: 275px;
+  padding: 4px;
+  border-radius: $boder-radius;
+  background-color: $column-bg-color;
+
+  .input-title-list {
+    width: 100%;
+    padding: $_8px 12px;
+    border-radius: $boder-radius;
+    border: none;
+    outline: none;
+    box-shadow: inset 0 0 0 2px #0079bf;
+    font-size: 16px;
+    color: $text-primary-color;
+
+    &::placeholder {
+      color: #5e6c84;
+    }
+  }
+}

@@ -1,19 +1,21 @@
 @import '../../variables.scss';
 
 .dashboard-container {
-  display: grid;
-  grid-template-rows: 50px 1fr;
+  width: 100%;
+  height: calc(100vh - #{$navbar-height});
+  background-color: $primary-color;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .dashboard-content {
-  padding-bottom: $_16px;
-  margin: 0 $_16px;
+  height: calc(100vh - #{$navbar-height} - #{$navbar-dashboard-height});
+  padding: 0 calc(#{$_16px - 4px}) $_16px calc(#{$_16px - 4px});
   display: flex;
-  gap: 0 $_8px;
   overflow-x: auto;
-  border-radius: $boder-radius;
 
-  scrollbar-color: darken($primary-color, 30) darken($primary-color, 15);
+  scrollbar-color: #ffffff30 #ffffff10;
   scrollbar-width: thin;
 
   &::-webkit-scrollbar {
@@ -21,12 +23,63 @@
   }
 
   &::-webkit-scrollbar-track {
-    background: darken($primary-color, 15);
+    background: #ffffff10;
     border-radius: $boder-radius;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: darken($primary-color, 30);
+    background: #ffffff30;
     border-radius: $boder-radius;
+  }
+
+  .list-wrapper-dragging {
+    transition: transform 0.2s ease;
+    transform: rotateZ(5deg);
+  }
+
+  .list-wrapper-dropping {
+    transition: transform 0.2s ease-in-out;
+    transform: rotateZ(0deg);
+  }
+
+  .list-wrapper-drop-preview {
+    margin: 0 4px;
+    margin-bottom: 8px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: $boder-radius;
+  }
+
+  .add-list {
+    height: 100%;
+    margin: 0 4px;
+    border-radius: $boder-radius;
+
+    .button-add-list {
+      width: 275px;
+      display: none;
+      border-radius: $boder-radius;
+      height: $height-column-header;
+      background-color: #00000020;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      cursor: pointer;
+      transition: $transition-hover;
+
+      .bi-plus-lg {
+        color: #fff;
+      }
+
+      span {
+        color: #fff;
+        margin-left: $_8px;
+      }
+
+      &:hover {
+        background-color: #00000030;
+      }
+    }
+
+    
   }
 }

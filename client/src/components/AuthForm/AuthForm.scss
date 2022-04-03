@@ -1,0 +1,164 @@
+@import '../../variables.scss';
+
+.title-auth {
+  text-align: center;
+  color: #5E6C84;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  line-height: 28px;
+  margin: $_16px 0;
+}
+.form-auth {
+  display: flex;
+  flex-direction: column;
+  .form-control {
+    width: 100%;
+    margin-bottom: $_16px;
+    .input-auth {
+      width: 100%;
+      height: 44px;
+      margin-bottom: 4px;
+      padding: 0 $_16px;
+      font-size: $_16px;
+      outline: none;
+      background-color: #FAFBFC;
+      border: 2px solid #DFE1E6;
+      border-radius: $boder-radius;
+      -webkit-transition: background-color .2s ease-in-out 0s, border-color .2s ease-in-out 0s;
+      transition: background-color .2s ease-in-out 0s, border-color .2s ease-in-out 0s;
+      &:focus {
+        background-color: white;
+        border: 2px solid #4C9AFF;
+        box-shadow: 0 0 0;
+      }
+      &:disabled {
+        opacity: 0.6;
+      }
+    }
+    .form-error {
+      color: red;
+      font-size: 14px;
+    }
+    .btn-submit-auth {
+      height: 44px;
+      width: 100%;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: $boder-radius;
+      background-color: $dark-primary-color;
+      -webkit-transition: background-color .2s ease-in-out 0s;
+      transition: background-color .2s ease-in-out 0s;
+      &:hover {
+        background-color: darken($primary-color, 15);
+      }
+      &:disabled {
+        cursor: default;
+        background-color: darken($primary-color, 15);
+        opacity: 0.6;
+      }
+    }
+  }
+}
+.or {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: $_16px;
+  font-size: 14px;
+}
+.auth-social {
+  .btn-auth-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 100%;
+    margin-bottom: $_16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #5E6C84;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: $boder-radius;
+    background-color: #ffffff;
+    box-shadow: rgba(0,0,0,0.2) 1px 1px 5px 0;
+    -webkit-transition: background-color .2s ease-in-out 0s;
+    transition: background-color .2s ease-in-out 0s;
+    img {
+      width: 18px;
+      margin-right: $_8px;
+    }
+    .logo-facebook {
+      width: 24px;
+    }
+    &:hover {
+      background-color: #F9FAFC;
+    }
+  }
+}
+.auth-option {
+  display: flex;
+  justify-content: space-between;
+  padding-top: $_16px;
+  border-top: 1px solid #ccc;
+  .link-option {
+    text-decoration: none;
+    font-size: 14px;
+    color: $dark-primary-color;
+    -webkit-transition: color .2s ease-in-out 0s;
+    transition: color .2s ease-in-out 0s;
+    &:hover {
+      color: darken($primary-color, 15);
+    }
+  }
+}
+.signup-send-email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .sendEmail {
+    width: 100px;
+  }
+  .signup-message {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #5E6C84;
+    padding: $_16px;
+    border-radius: $boder-radius;
+    span {
+      text-decoration: underline;
+    }
+    .link-signup {
+      color: #fff;
+    }
+  }
+  .error-message {
+    background-color: #eb5a46;
+    color: #fff;
+  }
+}
+.signup-message {
+  display: inline-block;
+  width: 100%;
+  color: #5E6C84;
+  padding: $_16px;
+  border-radius: $boder-radius;
+  margin-bottom: $_16px;
+  span {
+    text-decoration: underline;
+  }
+  .link-signup {
+    color: #fff;
+  }
+}
+.error-message {
+  background-color: #eb5a46;
+  color: #fff;
+}
