@@ -1,5 +1,5 @@
 import axios from 'axios'
-const BASE_URL = 'https://api-hitrello.herokuapp.com/'
+const BASE_URL = 'http://api-hitrello.herokuapp.com/'
 export default axios.create({
   baseURL: BASE_URL
 })

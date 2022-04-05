@@ -26,7 +26,7 @@ exports.signUpEmailActivation = async (req, res, next) => {
     if (process.env.NODE_ENV !== 'PRODUCTION') {
       url = `http://localhost:3000/account/activate/${activationToken}`
     } else {
-      url = `${req.protocol}://${req.get('host')}/account/activate/${resetToken}`
+      url = `https://hitrello.netlify.app/account/activate/${resetToken}`
     }
 
     await sendEmail({
