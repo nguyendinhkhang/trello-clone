@@ -1,6 +1,7 @@
 const whitelist = [
   'http://127.0.0.1:3000',
-  'http://localhost:3000'
+  'http://localhost:3000',
+  'https://hitrello.netlify.app'
 ]
 const corsOptions = {
   origin: (origin, callback) => {
