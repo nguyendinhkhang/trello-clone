@@ -1,0 +1,95 @@
+@import '../../variables.scss';
+
+.index {
+  height: 100vh;
+  background-color: #ece9ff;
+  .nav-index {
+    padding: 0 16px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo-index {
+      .img-logo-index {
+        width: 150px;
+      }
+    }
+    .nav-link {
+      .sign-in {
+        text-decoration: none;
+        padding: 6px $_16px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #0065ff;
+        margin-right: $_8px;
+        border-radius: $boder-radius;
+        transition: $transition-hover;
+        &:hover {
+          background-color: #e1def7;
+        }
+      }
+      .sign-up {
+        text-decoration: none;
+        padding: 6px $_16px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        border-radius: $boder-radius;
+        transition: $transition-hover;
+        background-color: #0065ff;
+        &:hover {
+          background-color: #0056d9;
+        }
+      }
+    }
+  }
+  .index-content {
+    position: relative;
+    height: calc(100vh - 68px);
+    .img-background {
+      width: 370px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .hero {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      padding: 0 60px;
+      justify-content: center;
+      .hero-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .hero-title {
+          color: #091e42;
+          font-size: 48px;
+          line-height: 48px;
+          font-weight: 600;
+          margin-bottom: $_16px;
+        }
+        .hero-content {
+          font-size: 22px;
+          color: #091e42;
+          margin-bottom: 32px;
+        }
+        .link-join-us {
+          width: 250px;
+          text-decoration: none;
+          padding: $_16px;
+          border-radius: 5px;
+          background-color: #0065ff;
+          color: #fff;
+          text-align: center;
+          font-size: 18px;
+          font-weight: 600;
+          transition: $transition-hover;
+          &:hover {
+            background-color: #0056d9;
+          }
+        }
+      }
+    }
+  }
+}
